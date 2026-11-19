@@ -1,0 +1,109 @@
+
+
+:root {
+    --bleu-marine: #123B70;
+    --bleu-principal: #2563EB;
+    --bleu-clair: #DBEAFE;
+    --fond: #F8FAFC;
+    --texte: #1E293B;
+}
+
+
+
+
+body {
+    background-color: var(--fond);
+    color: var(--texte);
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+.btn-primary {
+    background-color: var(--bleu-principal);
+    border-color: var(--bleu-principal);
+}
+
+.btn-primary:hover {
+    background-color: var(--bleu-marine);
+    border-color: var(--bleu-marine);
+}
+
+
+
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: var(--bleu-principal);
+    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.15);
+}
+
+
+/* =====================================
+   5. CARTES
+===================================== */
+
+.card {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =====================================
+   6. EN-TETE AUTHENTIFICATION
+===================================== */
+
+.auth-header {
+    background-color: var(--bleu-marine);
+    color: white;
+    padding: 20px;
+}
+
+
+/* =====================================
+   7. FOND AUTHENTIFICATION
+===================================== */
+
+.auth-background {
+    background-color: #F1F5F9;
+    min-height: 85vh;
+}
+
+
+/* =====================================
+   8. CARTE AUTHENTIFICATION
+===================================== */
+
+.auth-card {
+    background-color: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+    padding: 30px;
+    width: 100%;
+    max-width: 440px;
+}
+
+
+/* =====================================
+   9. RESPONSIVE
+===================================== */
+
+@media (max-width: 575.98px) {
+
+    .auth-card {
+        padding: 22px;
+        border-radius: 12px;
+    }
+
+    .auth-header {
+        padding: 15px;
+    }
+
+}
