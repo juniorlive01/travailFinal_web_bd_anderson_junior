@@ -8,7 +8,7 @@ $afficherMenu = false;
 ob_start();
 ?>
 
-<!-- En-tête de la page -->
+
 <div class="auth-header">
 
     <div class="container d-flex align-items-center gap-2">
@@ -24,7 +24,7 @@ ob_start();
 
 </div>
 
-<!-- Contenu principal -->
+
 <div class="auth-background d-flex justify-content-center align-items-center p-3">
 
     <div class="auth-card">
@@ -33,7 +33,7 @@ ob_start();
 
             <i class="bi bi-person-circle fs-1 text-primary"></i>
 
-            <h2 class="mt-2">Bienvenue chez Anderson&Junior !</h2>
+            <h2 class="mt-2">Bienvenue chez Anderson&Junior </h2>
 
             <p class="text-secondary">
                 Connectez-vous pour accéder à votre espace.
@@ -119,6 +119,6 @@ ob_start();
 
 $contenu = ob_get_clean();
 
-require 'vue/gabarit.php';
+require 'travailFinal_web_bd_anderson_junior/vue/gabarit.php';
 
 ?>

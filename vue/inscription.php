@@ -10,7 +10,7 @@ ob_start();
     <div class="container d-flex align-items-center gap-2">
         <i class="bi bi-headset fs-2"></i>
         <div>
-            <h4 class="mb-0">SUPPORT DESK</h4>
+            <h4 class="mb-0">SUPPORT TI ANDERSON&JUNIOR</h4>
             <small>Votre assistance informatique</small>
         </div>
     </div>
@@ -120,7 +120,7 @@ ob_start();
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-primary w-100 py-2">
+            <button type="submit" class="btn btn-primary w-100 py-2" id="btn-creer-compte">
                 <i class="bi bi-person-check me-2"></i>
                 Créer mon compte
             </button>
@@ -144,5 +144,5 @@ ob_start();
 
 <?php
 $contenu = ob_get_clean();
-require 'vue/gabarit.php';
+require 'travailFinal_web_bd_anderson_junior/vue/gabarit.php';
 ?>
