@@ -35,13 +35,18 @@ $afficherMenu = $afficherMenu ?? false;
 
 <body class="min-vh-100 d-flex flex-column">
 
-    <?php if ($afficherMenu): ?>
-
-        <header>
-            <?php require_once 'travailFinal_web_bd_anderson_junior/vue/menu.php'; ?>
-        </header>
-
-    <?php endif; ?>
+<!--pour afficher le menu en fonction du user(client ou TI)-->
+<?php if ($afficherMenu): ?>
+<header>
+    <?php
+    if (isset($espaceTechnicien) && $espaceTechnicien === true) {
+        require_once 'travailFinal_web_bd_anderson_junior/vue/menuTechnicien.php';
+    } else {
+        require_once 'travailFinal_web_bd_anderson_junior/vue/menu.php';
+    }
+    ?>
+</header>
+<?php endif; ?>
 
     <main class="flex-fill">
 

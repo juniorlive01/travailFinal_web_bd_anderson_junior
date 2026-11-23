@@ -222,7 +222,7 @@ body {
     margin-bottom: 0;
 }
 
-/* pour les tickets */
+/* POUR LES TICKETS */
 
 .tickets-section {
     background: white;
@@ -280,4 +280,388 @@ body {
     }
 
 }
+
+
+
+
+
+
+/* 
+   PAGE pour un NOUVEAU TICKET
+*/
+
+.ticket-form-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.03);
+}
+
+.ticket-form-card .form-label {
+    color: #1E293B;
+    font-size: 14px;
+}
+
+.ticket-form-card .form-control,
+.ticket-form-card .form-select {
+    padding: 12px 14px;
+    border: 1px solid #E2E8F0;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.ticket-form-card .form-control:focus,
+.ticket-form-card .form-select:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.10);
+}
+
+.ticket-form-card textarea {
+    resize: vertical;
+}
+
+.ticket-info-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 25px;
+    height: fit-content;
+}
+
+.info-icon {
+    width: 48px;
+    height: 48px;
+    background: #DBEAFE;
+    color: #2563EB;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+}
+
+.ticket-info-card h5 {
+    color: #123B70;
+}
+
+.ticket-info-card ul {
+    line-height: 1.7;
+}
+
+
+
+@media (max-width: 575.98px) {
+
+    .ticket-form-card {
+        padding: 20px;
+    }
+
+    .ticket-info-card {
+        padding: 20px;
+    }
+
+}
+
+
+
+
+/* 
+   PAGE  LA PAGE MES TICKETS
+*/
+
+
+
+.ticket-summary-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 22px 25px;
+    height: 100%;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ticket-summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.ticket-summary-card span {
+    color: #64748B;
+    font-size: 13px;
+}
+
+.ticket-summary-card h3 {
+    color: #123B70;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 12px;
+    margin-bottom: 0;
+}
+
+
+
+.my-tickets-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+
+
+.ticket-search {
+    width: 220px;
+}
+
+.ticket-filter {
+    width: 170px;
+}
+
+.ticket-search .form-control,
+.ticket-search .input-group-text,
+.ticket-filter {
+    border-color: #E2E8F0;
+    font-size: 13px;
+    padding: 10px 12px;
+}
+
+.ticket-search .form-control:focus,
+.ticket-filter:focus {
+    border-color: #2563EB;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+
+
+.my-tickets-card table {
+    margin-bottom: 0;
+}
+
+.my-tickets-card thead th {
+    background: #F8FAFC;
+    color: #64748B;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.my-tickets-card tbody td {
+    color: #334155;
+    font-size: 13px;
+    padding: 18px 15px;
+    border-bottom: 1px solid #F1F5F9;
+    white-space: nowrap;
+}
+
+.my-tickets-card tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+.priority-high,
+.priority-normal,
+.priority-urgent,
+.priority-low {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.priority-high {
+    color: #D97706;
+}
+
+.priority-normal {
+    color: #2563EB;
+}
+
+.priority-urgent {
+    color: #DC2626;
+}
+
+.priority-low {
+    color: #64748B;
+}
+
+
+
+.ticket-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #EFF6FF;
+    color: #2563EB;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.ticket-action:hover {
+    background: #DBEAFE;
+    color: #123B70;
+}
+
+
+
+@media (max-width: 575.98px) {
+
+    .my-tickets-card {
+        padding: 16px;
+    }
+
+    .ticket-search,
+    .ticket-filter {
+        width: 100%;
+    }
+
+    .ticket-summary-card {
+        padding: 18px;
+    }
+
+}
+
+
+
+
+
+/* PAGE DETAIL TICKET */
+
+.ticket-conversation {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.message-avatar {
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.employee-avatar {
+    background: #DBEAFE;
+    color: #123B70;
+}
+
+.technician-avatar {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+.message-bubble {
+    background: #F1F5F9;
+    color: #334155;
+    padding: 15px;
+    border-radius: 0 12px 12px 12px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.technician-bubble {
+    background: #EFF6FF;
+    border-radius: 0 12px 12px 12px;
+}
+
+.ticket-details-card {
+    background: #FFFFFF;
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 0;
+    border-bottom: 1px solid #F1F5F9;
+    font-size: 13px;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-row span {
+    color: #64748B;
+}
+
+.detail-row strong {
+    text-align: right;
+}
+
+.ticket-conversation textarea {
+    resize: vertical;
+}
+
+@media (max-width: 575.98px) {
+    .ticket-conversation {
+        padding: 20px;
+    }
+
+    .ticket-details-card {
+        padding: 20px;
+    }
+
+    .message-avatar {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+    }
+}
+
+
+
+
+/*la page  DETAIL TICKET du  TECHNICIEN */
+
+.private-notes-card {
+    background: #FFFBEB;
+    border: 1px solid #FDE68A;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.private-note {
+    background: #FFFFFF;
+    border: 1px solid #FDE68A;
+    border-left: 4px solid #F59E0B;
+    border-radius: 10px;
+    padding: 18px;
+    font-size: 14px;
+    color: #334155;
+}
+
+.private-notes-card textarea {
+    background: #FFFFFF;
+    resize: vertical;
+}
+
+.private-notes-card textarea:focus {
+    border-color: #F59E0B;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.10);
+}
+
+@media (max-width: 575.98px) {
+    .private-notes-card {
+        padding: 20px;
+    }
+
+    .private-notes-card h5 {
+        font-size: 17px;
+    }
+}
+
+
+
 
