@@ -38,7 +38,7 @@ $afficherMenu = $afficherMenu ?? false;
     <?php if ($afficherMenu): ?>
 
         <header>
-            <?php require_once 'vue/menu.php'; ?>
+            <?php require_once 'travailFinal_web_bd_anderson_junior/vue/menu.php'; ?>
         </header>
 
     <?php endif; ?>

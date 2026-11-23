@@ -95,7 +95,7 @@ ob_start();
 
         </form>
 
-        <!-- Inscription -->
+        <!-- Pour s'inscrire-->
         <div class="text-center mt-4">
 
             <span class="text-secondary">
