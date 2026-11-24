@@ -30,7 +30,7 @@ ob_start();
                     Veillez suivre la progression des tickets qui vous sont alloués
     
                 </p>
-                <a href="index.php?action=afficherPageTousTickets"
+                <a href="index.php?action=afficherPageTousLesTickets"
                    class="btn btn-light text-primary fw-semibold px-4">
                     Consulter les tickets
                     <i class="bi bi-arrow-right ms-2"></i>
@@ -81,7 +81,7 @@ ob_start();
                 </p>
             </div>
 
-            <a href="index.php?action=afficherPageTousTickets"
+            <a href="index.php?action=afficherPageTousLesTickets"
                class="btn btn-outline-primary btn-sm px-3">
                 Voir tous les tickets
             </a>

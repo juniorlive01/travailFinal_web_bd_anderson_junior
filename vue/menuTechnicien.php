@@ -22,13 +22,13 @@
 
             <ul class="navbar-nav mx-auto gap-lg-3">
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="	index.php?action=afficherPageAccueilTechnicien">
                         Tableau de bord
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="index.php?action=afficherPageTousTickets">
+                    <a class="nav-link" href="index.php?action=afficherPageTousLesTickets">
                         Tous les tickets
                     </a>
                 </li>

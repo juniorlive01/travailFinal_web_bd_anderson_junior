@@ -2,7 +2,7 @@
 <nav class="navbar navbar-expand-lg bg-white py-3 border-bottom">
     <div class="container">
 
-        <!-- Logo -->
+        
         <a class="navbar-brand d-flex align-items-center gap-2" href="#">
             <div class="brand-icon">
                 <i class="bi bi-headset"></i>
@@ -30,19 +30,19 @@
             <ul class="navbar-nav mx-auto gap-lg-3">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">
+                    <a class="nav-link active" href="index.php?action=afficherPageAccueilEmploye">
                         Tableau de bord
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.php?action=afficherPageMesTickets">
                         Mes tickets
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="#">
+                    <a class="nav-link" href="index.php?action=afficherPageNouveauTicket">
                         Nouveau ticket
                     </a>
                 </li>
@@ -51,7 +51,7 @@
 
         
 
-            
+
             <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
 
                 <button class="btn btn-light rounded-circle position-relative"

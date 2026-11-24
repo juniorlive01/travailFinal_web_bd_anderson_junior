@@ -125,7 +125,7 @@ ob_start();
                         <td><span class="badge text-bg-warning">En cours</span></td>
                         <td>22 nov. 2026</td>
                         <td>
-                            <a href="#" class="ticket-action">
+                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>
@@ -140,7 +140,7 @@ ob_start();
                         <td><span class="badge text-bg-primary">Ouvert</span></td>
                         <td>21 nov. 2026</td>
                         <td>
-                            <a href="#" class="ticket-action">
+                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>
@@ -155,7 +155,7 @@ ob_start();
                         <td><span class="badge text-bg-success">Fermé</span></td>
                         <td>20 nov. 2026</td>
                         <td>
-                            <a href="#" class="ticket-action">
+                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>
@@ -170,7 +170,7 @@ ob_start();
                         <td><span class="badge text-bg-primary">Ouvert</span></td>
                         <td>19 nov. 2026</td>
                         <td>
-                            <a href="#" class="ticket-action">
+                            <a href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>
@@ -185,7 +185,7 @@ ob_start();
                         <td><span class="badge text-bg-warning">En cours</span></td>
                         <td>18 nov. 2026</td>
                         <td>
-                            <a href="#" class="ticket-action">
+                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
                                 <i class="bi bi-eye"></i>
                             </a>
                         </td>

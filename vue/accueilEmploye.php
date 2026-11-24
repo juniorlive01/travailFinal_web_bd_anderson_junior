@@ -33,7 +33,7 @@ ob_start();
                 Créez une demande et l'équipe d'Anderson&Junior vous répondra.
             </p>
 
-            <a href="#" class="btn btn-light">
+            <a href="index.php?action=afficherPageNouveauTicket" class="btn btn-light">
                 <i class="bi bi-plus-lg me-2"></i>
                 Créer un ticket
             </a>
@@ -71,7 +71,7 @@ ob_start();
 
     </div>
 
-    <!-- Derniers tickets -->
+
     <div class="tickets-section">
 
         <div class="d-flex justify-content-between align-items-center mb-3">
