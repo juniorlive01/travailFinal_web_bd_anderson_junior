@@ -21,7 +21,7 @@ ob_start();
         </p>
     </div>
 
-    <!-- Bannière de création -->
+    
     <div class="welcome-banner mb-4">
 
         <div>
