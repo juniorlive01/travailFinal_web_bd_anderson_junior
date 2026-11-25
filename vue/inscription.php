@@ -6,6 +6,7 @@ $afficherMenu = false;
 ob_start();
 ?>
 
+
 <div class="auth-header">
     <div class="container d-flex align-items-center gap-2">
         <i class="bi bi-headset fs-2"></i>
@@ -31,7 +32,7 @@ ob_start();
         <form method="post"
               action="index.php?action=inscrire"
               class="needs-validation"
-              novalidate>
+              novalidate><!-- Les champs sont transmis a post selon leurs attributs name -->
 
             <div class="mb-3">
                 <label for="prenom" class="form-label">Prénom</label>
@@ -41,7 +42,8 @@ ob_start();
                        id="prenom"
                        name="prenom"
                        placeholder="Votre prénom"
-                       required>
+                       required 
+                       minlength="2" maxlength="50">
 
                 <div class="invalid-feedback">
                     Veuillez entrer votre prénom.
@@ -56,7 +58,8 @@ ob_start();
                        id="nom"
                        name="nom"
                        placeholder="Votre nom"
-                       required>
+                       required 
+                       minlength="2" maxlength="50">
 
                 <div class="invalid-feedback">
                     Veuillez entrer votre nom.
@@ -73,13 +76,26 @@ ob_start();
                        id="courriel"
                        name="courriel"
                        placeholder="nom@entreprise.com"
-                       required>
+                       required
+                       	maxlength="100">
 
                 <div class="invalid-feedback">
                     Veuillez entrer une adresse courriel valide.
                 </div>
             </div>
 
+
+
+
+
+
+
+<!--Verifications coté client sur le mott de passe avec :
+   (?=.*[A-Z]) pour Au moins une lettre majuscule
+   (?=.*[a-z])	Au moins une lettre minuscule
+   (?=.*\d)	Au moins un chiffre
+   (?=.*\W)	Au moins un caractère spécial
+   .{8,}	Au moins 8 caractères au total-->
             <div class="mb-3">
                 <label for="motDePasse" class="form-label">
                     Mot de passe
@@ -91,7 +107,8 @@ ob_start();
                        name="motDePasse"
                        placeholder="Créer un mot de passe"
                        pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}"
-                       required>
+                       required 
+                       minlength="8" maxlength="64">
 
                 <div class="invalid-feedback">
                     Le mot de passe doit respecter les critères de sécurité.
@@ -113,7 +130,8 @@ ob_start();
                        id="confirmationMotDePasse"
                        name="confirmationMotDePasse"
                        placeholder="Confirmer le mot de passe"
-                       required>
+                       required  
+                       minlength="8" maxlength="64">
 
                 <div class="invalid-feedback">
                     Les deux mots de passe doivent être identiques.
@@ -142,7 +160,9 @@ ob_start();
 
 </div>
 
+
 <?php
 $contenu = ob_get_clean();
+
 require 'travailFinal_web_bd_anderson_junior/vue/gabarit.php';
 ?>

@@ -41,7 +41,7 @@ ob_start();
 
         </div>
 
-        <!-- Formulaire -->
+
         <form method="post"
               action="index.php?action=connecter"
               class="needs-validation"

@@ -23,11 +23,11 @@ $afficherMenu = $afficherMenu ?? false;
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap Icons -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 
-    <link href="css/style.css" rel="stylesheet">
+   <link href="travailFinal_web_bd_anderson_junior/public/css/style.css" rel="stylesheet">
 
     <title><?= htmlspecialchars($titreOnglet, ENT_QUOTES, 'UTF-8') ?> | Support Desk</title>
 
@@ -66,7 +66,8 @@ $afficherMenu = $afficherMenu ?? false;
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <script src="js/bootstrap.js"></script>
+    <!-- <script src="js/bootstrap.js"></script> -->
+    <script src="travailFinal_web_bd_anderson_junior/public/js/validation.js"></script>
 
 </body>
 
