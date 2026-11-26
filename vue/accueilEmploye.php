@@ -139,6 +139,6 @@ ob_start();
 
 $contenu = ob_get_clean();
 
-require 'travailFinal_web_bd_anderson_junior/vue/gabarit.php';
+require 'vue/gabarit.php';
 
 ?>

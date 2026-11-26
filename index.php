@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'travailFinal_web_bd_anderson_junior/controleur/controleur.php';
+require 'controleur/controleur.php';
 
 try{
     if(!isset($_GET['action'])){

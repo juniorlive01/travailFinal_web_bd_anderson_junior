@@ -27,7 +27,7 @@ $afficherMenu = $afficherMenu ?? false;
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 
-   <link href="travailFinal_web_bd_anderson_junior/public/css/style.css" rel="stylesheet">
+   <link href="public/css/style.css" rel="stylesheet">
 
     <title><?= htmlspecialchars($titreOnglet, ENT_QUOTES, 'UTF-8') ?> | Support Desk</title>
 
@@ -40,9 +40,9 @@ $afficherMenu = $afficherMenu ?? false;
 <header>
     <?php
     if (isset($espaceTechnicien) && $espaceTechnicien === true) {
-        require_once 'travailFinal_web_bd_anderson_junior/vue/menuTechnicien.php';
+        require_once 'vue/menuTechnicien.php';
     } else {
-        require_once 'travailFinal_web_bd_anderson_junior/vue/menu.php';
+        require_once 'vue/menu.php';
     }
     ?>
 </header>
@@ -67,7 +67,7 @@ $afficherMenu = $afficherMenu ?? false;
 
 
     <!-- <script src="js/bootstrap.js"></script> -->
-    <script src="travailFinal_web_bd_anderson_junior/public/js/validation.js"></script>
+    <script src="public/js/validation.js"></script>
 
 </body>
 

@@ -3,48 +3,48 @@
 
 function afficherPageConnexion()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/connexion.php';
+    require 'vue/connexion.php';
 }
 
 function afficherPageInscription()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/inscription.php';
+    require 'vue/inscription.php';
 }
 
 function afficherPageAccueilEmploye(){
-    require 'travailFinal_web_bd_anderson_junior/vue/accueilEmploye.php';
+    require 'vue/accueilEmploye.php';
 }
 
 
 function afficherPageNouveauTicket()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/nouveauTicket.php';
+    require 'vue/nouveauTicket.php';
 }
 
 
 function afficherPageMesTickets()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/mesTickets.php';
+    require 'vue/mesTickets.php';
 }
 
 function afficherPagedetailTickets()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/detailTicket.php';
+    require 'vue/detailTicket.php';
 }
 
 function afficherPageAccueilTechnicien()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/accueilTechnicien.php';
+    require 'vue/accueilTechnicien.php';
 }
 
 function afficherPageTousLesTickets()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/toutLesTickets.php';
+    require 'vue/toutLesTickets.php';
 }
 
 function afficherPageDetailTicketTechnicien()
 {
-    require 'travailFinal_web_bd_anderson_junior/vue/detailTicketTechnicien.php';
+    require 'vue/detailTicketTechnicien.php';
 }
 
 
@@ -85,7 +85,7 @@ function inscrire(){
     }
 
     if (!empty($erreurs)) {
-        require 'travailFinal_web_bd_anderson_junior/vue/inscription.php';
+        require 'vue/inscription.php';
         return;
     }
 
