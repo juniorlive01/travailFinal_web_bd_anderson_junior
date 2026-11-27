@@ -1,5 +1,9 @@
 
 <?php
+/** @var array $tickets */
+assert(isset($tickets), 'La variable $tickets doit être définie.');
+assert(is_array($tickets), 'La variable $tickets doit être un tableau.');
+// fais en sort que l'editeur comprenne la variable tickets dans la vue, même si elle est créée dans le contrôleur.
 
 $titreOnglet = 'Tous les tickets';
 $afficherMenu = true;
@@ -131,7 +135,7 @@ ob_start();
                         </td>
                     </tr>
 
-                    <?php foreach ($tickets as $ticket): ?>
+                     <?php foreach ($tickets as $ticket): ?>
                         <?php
                         $styleEtape = [
                             'ouvert'  => ['text-bg-primary', 'Ouvert'],
@@ -148,7 +152,9 @@ ob_start();
                         ];
                         $classePriorite = $stylePriorite[$ticket['priorite']] ?? 'priority-normal';
                         ?>
-    <tr>
+
+
+                  <tr>
         <td class="fw-semibold">#<?= (int) $ticket['id_ticket'] ?></td>
         <td><?= htmlspecialchars($ticket['first_name'] . ' ' . $ticket['last_name']) ?></td>
         <td><?= htmlspecialchars($ticket['title']) ?></td>
@@ -159,6 +165,8 @@ ob_start();
         <td> ...le bouton « Voir », à l'étape 5... </td>
     </tr>
 <?php endforeach; ?>
+
+
 
                 </tbody>
             </table>
