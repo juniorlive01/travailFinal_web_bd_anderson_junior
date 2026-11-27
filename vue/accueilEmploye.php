@@ -83,7 +83,7 @@ ob_start();
                 </p>
             </div>
 
-            <a href="#" class="text-primary text-decoration-none">
+            <a href="index.php?action=afficherPageMesTickets" class="text-primary text-decoration-none">
                 Voir tout <i class="bi bi-arrow-right"></i>
             </a>
 

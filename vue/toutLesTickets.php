@@ -67,11 +67,11 @@ ob_start();
                 <span class="input-group-text bg-white">
                     <i class="bi bi-search text-secondary"></i>
                 </span>
-                <input type="search" class="form-control"
+                <input type="search" class="form-control" id="rechercheTicket"
                        placeholder="Rechercher un ticket...">
             </div>
 
-            <select class="form-select ticket-filter">
+            <select class="form-select ticket-filter" id="filtreStatut">
                 <option value="">Tous les statuts</option>
                 <option>Ouvert</option>
                 <option>En cours</option>

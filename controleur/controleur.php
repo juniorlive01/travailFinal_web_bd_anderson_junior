@@ -92,8 +92,6 @@ function inscrire(){
     $msgSucces = 'Toutes les validations sont réussies ! Le formulaire est valide.';
 
 
-    // plus tard on doit enregistrer  en base de données 
-    $msgSucces = 'Toutes les validations sont réussies ! Le formulaire est valide.';
 
 // Plus tard, nous enregistrerons les données en base de données
 require 'vue/inscription.php';
