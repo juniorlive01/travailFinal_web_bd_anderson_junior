@@ -92,6 +92,23 @@ ob_start();
                               maxlength="2000"
                               placeholder="Écrivez votre réponse..."
                               required></textarea>
+                    <div class="mb-4">
+
+                        <label for="pieceJointe" class="form-label fw-semibold">
+                            Pièce jointe <span class="text-secondary fw-normal">(facultatif)</span>
+                        </label>
+
+                        <input type="file"
+                               class="form-control"
+                               id="pieceJointe"
+                               name="pieceJointe"
+                               accept=".jpg,.jpeg,.png,.pdf,.doc,.docx">
+
+                        <div class="form-text">
+                            Formats acceptés : JPG, PNG, PDF et DOCX.
+                        </div>
+
+                    </div>
 
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn btn-primary px-4">

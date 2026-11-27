@@ -1,5 +1,6 @@
 
 <?php
+ require_once 'modele/modeleTicket.php';
 
 function afficherPageConnexion()
 {
@@ -39,6 +40,7 @@ function afficherPageAccueilTechnicien()
 
 function afficherPageTousLesTickets()
 {
+    $tickets = ModeleTicket::obtenirTousLesTickets()->fetchAll();
     require 'vue/toutLesTickets.php';
 }
 
@@ -48,7 +50,7 @@ function afficherPageDetailTicketTechnicien()
 }
 
 
-function inscrire(){
+function validationInscription(){
     $erreurs = [];
 
     $prenom = trim($_POST['prenom'] ?? '');//recupere les variables du post si absent recupere un vide
@@ -99,7 +101,7 @@ require 'vue/inscription.php';
 }
 
 
-function connecter(){
+function validationConnexion(){
 
     $erreurs = [];
 
