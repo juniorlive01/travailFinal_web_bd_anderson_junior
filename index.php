@@ -21,7 +21,7 @@ try{
             break;
         
         case 'inscrire':
-            inscrire();
+            validationInscription();
             break;
 
         case 'connecter':

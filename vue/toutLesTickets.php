@@ -131,65 +131,34 @@ ob_start();
                         </td>
                     </tr>
 
-                    <tr>
-                        <td class="fw-semibold">#TK-023</td>
-                        <td>Marie Dupont</td>
-                        <td>Imprimante non détectée</td>
-                        <td>Matériel</td>
-                        <td><span class="priority-normal">Normale</span></td>
-                        <td><span class="badge text-bg-primary">Ouvert</span></td>
-                        <td>21 nov. 2026</td>
-                        <td>
-                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </td>
-                    </tr>
+                    <?php foreach ($tickets as $ticket): ?>
+                        <?php
+                        $styleEtape = [
+                            'ouvert'  => ['text-bg-primary', 'Ouvert'],
+                            'encours' => ['text-bg-warning', 'En cours'],
+                            'ferme'   => ['text-bg-success', 'Fermé'],
+                        ];
+                        [$classeEtape, $texteEtape] = $styleEtape[$ticket['etape']];
 
-                    <tr>
-                        <td class="fw-semibold">#TK-022</td>
-                        <td>Jean Martin</td>
-                        <td>Installation logiciel</td>
-                        <td>Logiciel</td>
-                        <td><span class="priority-low">Faible</span></td>
-                        <td><span class="badge text-bg-success">Fermé</span></td>
-                        <td>20 nov. 2026</td>
-                        <td>
-                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="fw-semibold">#TK-021</td>
-                        <td>Sophie Bernard</td>
-                        <td>Accès au compte bloqué</td>
-                        <td>Compte</td>
-                        <td><span class="priority-high">Élevée</span></td>
-                        <td><span class="badge text-bg-primary">Ouvert</span></td>
-                        <td>19 nov. 2026</td>
-                        <td>
-                            <a href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td class="fw-semibold">#TK-020</td>
-                        <td>Paul Tremblay</td>
-                        <td>Écran qui ne fonctionne plus</td>
-                        <td>Matériel</td>
-                        <td><span class="priority-urgent">Urgente</span></td>
-                        <td><span class="badge text-bg-warning">En cours</span></td>
-                        <td>18 nov. 2026</td>
-                        <td>
-                            <a  href="index.php?action=afficherPageDetailTicketTechnicien" class="ticket-action">
-                                <i class="bi bi-eye"></i>
-                            </a>
-                        </td>
-                    </tr>
+                        $stylePriorite = [
+                            'Urgente' => 'priority-urgent',
+                            'Élevée'  => 'priority-high',
+                            'Normale' => 'priority-normal',
+                            'Faible'  => 'priority-low',
+                        ];
+                        $classePriorite = $stylePriorite[$ticket['priorite']] ?? 'priority-normal';
+                        ?>
+    <tr>
+        <td class="fw-semibold">#<?= (int) $ticket['id_ticket'] ?></td>
+        <td><?= htmlspecialchars($ticket['first_name'] . ' ' . $ticket['last_name']) ?></td>
+        <td><?= htmlspecialchars($ticket['title']) ?></td>
+        <td><?= htmlspecialchars($ticket['category_name']) ?></td>
+        <td><?= htmlspecialchars($ticket['priorite']) ?></td>
+        <td> ...le badge, à l'étape 4... </td>
+        <td><?= date('d/m/Y', strtotime($ticket['creation_date'])) ?></td>
+        <td> ...le bouton « Voir », à l'étape 5... </td>
+    </tr>
+<?php endforeach; ?>
 
                 </tbody>
             </table>
