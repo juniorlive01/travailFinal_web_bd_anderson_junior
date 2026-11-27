@@ -80,7 +80,7 @@ ob_start();
                 <hr class="my-4">
 
                 <!-- Réponse publique -->
-                <form action="#" method="post">
+                <form action="#" method="post" class="needs-validation" novalidate>
                     <label for="reponse" class="form-label fw-semibold">
                         Répondre au client
                     </label>
@@ -89,6 +89,7 @@ ob_start();
                               id="reponse"
                               name="reponse"
                               rows="4"
+                              maxlength="2000"
                               placeholder="Écrivez votre réponse..."
                               required></textarea>
 
@@ -126,7 +127,7 @@ ob_start();
                     </p>
                 </div>
 
-                <form action="#" method="post">
+                <form action="#" method="post" class="needs-validation" novalidate>
                     <label for="notePrivee" class="form-label fw-semibold">
                         Ajouter une note privée
                     </label>
@@ -135,6 +136,7 @@ ob_start();
                               id="notePrivee"
                               name="notePrivee"
                               rows="3"
+                              maxlength="2000"
                               placeholder="Laissez une note pour l'équipe TI..."
                               required></textarea>
 
@@ -162,7 +164,7 @@ ob_start();
                         Modifier le statut
                     </label>
 
-                    <select class="form-select mb-3" id="statut" name="statut">
+                    <select class="form-select mb-3" id="statut" name="statut" required>
                         <option value="ouvert">Ouvert</option>
                         <option value="encours" selected>En cours</option>
                         <option value="ferme">Fermé</option>
