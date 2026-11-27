@@ -41,6 +41,11 @@ ob_start();
 
         </div>
 
+        <?php if (isset($msgErreurConnexion)) : ?>
+            <div class="alert alert-warning">
+                <?= htmlspecialchars($msgErreurConnexion, ENT_QUOTES, 'UTF-8') ?>
+            </div>
+        <?php endif; //message pour confirmer les validations php du courriel et mot de passe mais pas encore implementé dans bd?>
 
         <form method="post"
               action="index.php?action=connecter"
@@ -54,34 +59,36 @@ ob_start();
                 </label>
 
                 <input type="email"
-                       class="form-control"
-                       id="courriel"
-                       name="courriel"
-                       placeholder="nom@couriel.com"
-                       required>
+                    class="form-control <?= isset($erreurs['courriel']) ? 'is-invalid' : '' ?>"
+                    id="courriel"
+                    name="courriel"
+                    placeholder="nom@couriel.com"
+                    value="<?= htmlspecialchars($courriel ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                    required>
 
                 <div class="invalid-feedback">
-                    Veuillez entrer une adresse courriel valide.
+                    <?= $erreurs['courriel'] ?? 'Veuillez entrer une adresse courriel valide.' ?>
                 </div>
 
             </div>
 
-            <div class="mb-4">
+           <div class="mb-4">
 
                 <label for="motDePasse" class="form-label">
                     Mot de passe
                 </label>
 
                 <input type="password"
-                       class="form-control"
-                       id="motDePasse"
-                       name="motDePasse"
-                       placeholder="Votre mot de passe"
-                       required>
+                    class="form-control <?= isset($erreurs['motDePasse']) ? 'is-invalid' : '' ?>"
+                    id="motDePasse"
+                    name="motDePasse"
+                    placeholder="Votre mot de passe"
+                    required>
 
                 <div class="invalid-feedback">
-                    Veuillez entrer votre mot de passe.
+                    <?= $erreurs['motDePasse'] ?? 'Veuillez entrer votre mot de passe.' ?>
                 </div>
+                <!-- verifie uniquement si cest present et pas si cest valide -->
 
             </div>
 

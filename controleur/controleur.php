@@ -70,8 +70,7 @@ function inscrire(){
     }
 
     if (
-        strlen($motDePasse) < 8 ||
-        strlen($motDePasse) > 64 ||
+        strlen($motDePasse) < 8 || strlen($motDePasse) > 64 ||
         !preg_match('/[A-Z]/', $motDePasse) ||
         !preg_match('/[a-z]/', $motDePasse) ||
         !preg_match('/[0-9]/', $motDePasse) ||
@@ -89,9 +88,44 @@ function inscrire(){
         return;
     }
 
-    // plus tard on doit enregistrer  en base de données 
-    echo 'Les validations PHP sont réussies ';
+    //validation temporaire,a supprimer tantot!!!
+    $msgSucces = 'Toutes les validations sont réussies ! Le formulaire est valide.';
 
+
+    // plus tard on doit enregistrer  en base de données 
+    $msgSucces = 'Toutes les validations sont réussies ! Le formulaire est valide.';
+
+// Plus tard, nous enregistrerons les données en base de données
+require 'vue/inscription.php';
+
+}
+
+
+function connecter(){
+
+    $erreurs = [];
+
+    $courriel = trim($_POST['courriel'] ?? '');
+    $motDePasse = $_POST['motDePasse'] ?? '';
+
+    //filter_var pour valider le format du
+    if (!filter_var($courriel, FILTER_VALIDATE_EMAIL)) {
+        $erreurs['courriel'] = 'Veuillez saisir une adresse courriel valide.';
+    }
+
+    if (empty($motDePasse)) {
+        $erreurs['motDePasse'] = 'Veuillez saisir votre mot de passe.';
+    }
+
+    if (!empty($erreurs)) {
+        require 'vue/connexion.php';
+        return;
+    }
+
+    // La vérification des identifiants sera faite avec la base de données.
+    $msgErreurConnexion = ' vérification php correct, verification des identifiants a faire';
+
+    require 'vue/connexion.php';
 }
 
 

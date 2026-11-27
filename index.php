@@ -19,8 +19,15 @@ try{
         case 'afficherPageInscription':
             afficherPageInscription();
             break;
-
         
+        case 'inscrire':
+            inscrire();
+            break;
+
+        case 'connecter':
+            connecter();
+            break;
+
         case 'afficherPageAccueilEmploye':
             afficherPageAccueilEmploye();
             break;

@@ -29,41 +29,43 @@ ob_start();
             </p>
         </div>
 
+        
+        <!-- message de validation php temporaire, a supprimer(anderson)!!! -->
+        <?php if (isset($msgSucces)) : ?>
+    <div class="alert alert-success">
+        <?= htmlspecialchars($msgSucces, ENT_QUOTES, 'UTF-8') ?>
+    </div>
+<?php endif; ?>
+
         <form method="post"
               action="index.php?action=inscrire"
               class="needs-validation"
-              novalidate><!-- Les champs sont transmis a post selon leurs attributs name -->
+              novalidate
+              ><!-- Les champs sont transmis a post selon leurs attributs name -->
 
             <div class="mb-3">
                 <label for="prenom" class="form-label">Prénom</label>
 
-                <input type="text"
-                       class="form-control"
-                       id="prenom"
-                       name="prenom"
-                       placeholder="Votre prénom"
-                       required 
-                       minlength="2" maxlength="50">
+                <input type="text" name="prenom" id="prenom"
+                        class="form-control <?= isset($erreurs['prenom']) ? 'is-invalid' : '' ?>"
+                        value="<?= htmlspecialchars($prenom ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                        required minlength="2" maxlength="50">
 
-                <div class="invalid-feedback">
-                    Veuillez entrer votre prénom.
-                </div>
+<div class="invalid-feedback">
+    <?= $erreurs['prenom'] ?? 'Veuillez saisir un prénom valide.' ?>
+</div>
             </div>
 
             <div class="mb-3">
-                <label for="nom" class="form-label">Nom</label>
+                 <label for="nom" class="form-label">Nom</label>
+                <input type="text" name="nom" id="nom"
+                    class="form-control <?= isset($erreurs['nom']) ? 'is-invalid' : '' ?>"
+                    value="<?= htmlspecialchars($nom ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                    required minlength="2" maxlength="50">
 
-                <input type="text"
-                       class="form-control"
-                       id="nom"
-                       name="nom"
-                       placeholder="Votre nom"
-                       required 
-                       minlength="2" maxlength="50">
-
-                <div class="invalid-feedback">
-                    Veuillez entrer votre nom.
-                </div>
+<div class="invalid-feedback">
+    <?= $erreurs['nom'] ?? 'Veuillez saisir un nom valide.' ?>
+</div>
             </div>
 
             <div class="mb-3">
@@ -71,17 +73,14 @@ ob_start();
                     Adresse courriel
                 </label>
 
-                <input type="email"
-                       class="form-control"
-                       id="courriel"
-                       name="courriel"
-                       placeholder="nom@entreprise.com"
-                       required
-                       	maxlength="100">
+                <input type="email" name="courriel" id="courriel"
+                    class="form-control <?= isset($erreurs['courriel']) ? 'is-invalid' : '' ?>"
+                    value="<?= htmlspecialchars($courriel ?? '', ENT_QUOTES, 'UTF-8') ?>"
+                    required maxlength="100">
 
-                <div class="invalid-feedback">
-                    Veuillez entrer une adresse courriel valide.
-                </div>
+<div class="invalid-feedback">
+    <?= $erreurs['courriel'] ?? 'Veuillez saisir un courriel valide.' ?>
+</div>
             </div>
 
 
@@ -101,18 +100,16 @@ ob_start();
                     Mot de passe
                 </label>
 
-                <input type="password"
-                       class="form-control"
-                       id="motDePasse"
-                       name="motDePasse"
-                       placeholder="Créer un mot de passe"
-                       pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}"
-                       required 
-                       minlength="8" maxlength="64">
+                <input type="password" 
+                name="motDePasse" 
+                id="motDePasse"
+                    class="form-control <?= isset($erreurs['motDePasse']) ? 'is-invalid' : '' ?>"
+                    required minlength="8" maxlength="64"
+                    pattern="(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*\W).{8,}">
 
-                <div class="invalid-feedback">
-                    Le mot de passe doit respecter les critères de sécurité.
-                </div>
+<div class="invalid-feedback">
+    <?= $erreurs['motDePasse'] ?? 'Le mot de passe ne respecte pas les critères requis.' ?>
+</div>
 
                 <div class="form-text">
                     8 caractères minimum, une majuscule, une minuscule,
@@ -125,17 +122,15 @@ ob_start();
                     Confirmer le mot de passe
                 </label>
 
-                <input type="password"
-                       class="form-control"
-                       id="confirmationMotDePasse"
-                       name="confirmationMotDePasse"
-                       placeholder="Confirmer le mot de passe"
-                       required  
-                       minlength="8" maxlength="64">
+                <input type="password" 
+                name="confirmationMotDePasse" 
+                id="confirmationMotDePasse"
+                class="form-control <?= isset($erreurs['confirmationMotDePasse']) ? 'is-invalid' : '' ?>"
+                required minlength="8" maxlength="64">
 
-                <div class="invalid-feedback">
-                    Les deux mots de passe doivent être identiques.
-                </div>
+<div class="invalid-feedback">
+    <?= $erreurs['confirmationMotDePasse'] ?? 'Les mots de passe doivent être identiques.' ?>
+</div>
             </div>
 
             <button type="submit" class="btn btn-primary w-100 py-2" id="btn-creer-compte">
