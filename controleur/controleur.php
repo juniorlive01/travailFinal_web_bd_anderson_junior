@@ -40,8 +40,10 @@ function afficherPageAccueilTechnicien()
 
 function afficherPageTousLesTickets()
 {
-    $tickets = ModeleTicket::obtenirTousLesTickets()->fetchAll();
+    $tickets = modeleTicket::obtenirTousLesTickets()->fetchAll();
     require 'vue/toutLesTickets.php';
+
+
 }
 
 function afficherPageDetailTicketTechnicien()

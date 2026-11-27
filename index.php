@@ -25,7 +25,7 @@ try{
             break;
 
         case 'connecter':
-            connecter();
+            validationConnexion();
             break;
 
         case 'afficherPageAccueilEmploye':
@@ -69,7 +69,7 @@ catch(Exception $ex){
 
 $msgErreur = $ex->getMessage();
 
-require 'travailFinal_web_bd_anderson_junior/vue/erreur.php';
+require 'vue/erreur.php';
 }
 
 ?>
